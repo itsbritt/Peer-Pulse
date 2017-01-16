@@ -5,7 +5,11 @@ export default class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-       <TouchableHighlight style={ styles.imageContainer } onPress={() => {
+        <View style={styles.textContainer}>
+          <Text style={styles.header}>Hello ___!</Text>
+        </View>
+      <View style={styles.navBar}>
+       <TouchableHighlight onPress={() => {
          this.props.navigator.push({
            name: 'App',
            title: 'AppPage'
@@ -15,67 +19,38 @@ export default class Home extends Component {
        </TouchableHighlight>
 
       </View>
+    </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
+  textContainer: {
+    flex: 2,
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginTop: 100
+  },
   container: {
     flex: 1,
-    marginTop:60
+    backgroundColor: 'transparent',
   },
-  imageContainer: {
-    height:128,
-    width: 128,
-    borderRadius: 64
+  header: {
+    flexDirection: 'column',
+    fontSize: 50,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   image: {
-    height:128,
-    width: 128,
-    borderRadius: 64
-  },
-  imageContainer2: {
-
+    height:50,
+    width: 50,
+    marginBottom: 10,
+    marginLeft: 10,
   },
   navBar: {
     flexDirection: 'row',
     width: undefined,
     height: undefined,
     backgroundColor: 'transparent',
-    justifyContent: 'center',
-    alignItems: 'flex-end',
-    marginTop: 350
   },
-  container: {
-    flex: 1,
-    width: undefined,
-    height: undefined,
-    backgroundColor: 'transparent',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  header:{
-    fontSize: 30,
-    marginTop: 200,
-  },
-  navButton: {
-  backgroundColor: '#292F36',
-  height: 50,
-  width: 50,
-  justifyContent: 'flex-start',
-  alignItems: 'flex-end',
-},
-  button: {
-  backgroundColor: '#292F36',
-  height: 50,
-  width: 150,
-  marginBottom: 100,
-  justifyContent: 'center',
-  alignItems: 'center',
-  borderRadius: 10,
-},
-buttonText: {
-  color: 'white',
-  fontSize: 20
-},
 });
