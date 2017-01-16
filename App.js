@@ -1,10 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
-import React, { Component } from 'react';
+import React from 'react';
 import {
   AppRegistry,
   StyleSheet,
@@ -14,9 +8,9 @@ import {
   View
 } from 'react-native';
 
-import Home from './Home';
+import Home from './Home'
 
-class App extends Component {
+class App extends React.Component {
 
   render() {
     return (
@@ -25,10 +19,10 @@ class App extends Component {
             Peer Pulse
           </Text>
 
-      <TouchableHighlight style={styles.button} onPress={() =>{
+      <TouchableHighlight style={styles.button} onPress={() => {
         this.props.navigator.push({
-          name: 'Landing',
-          title: 'LandingPage'
+          name: 'Home',
+          title: 'HomePage'
         })
       }}>
   <Text style={styles.buttonText}>get started</Text>

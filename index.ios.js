@@ -7,12 +7,8 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  StyleSheet,
-  Text,
-  Image,
-  TouchableHighlight,
   Navigator,
-  View
+  TouchableHighlight
 } from 'react-native';
 
 import App from './App';
