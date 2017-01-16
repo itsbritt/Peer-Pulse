@@ -10,17 +10,22 @@ import {
   StyleSheet,
   Text,
   Image,
+  TouchableHighlight,
   View
 } from 'react-native';
 
 export default class Peer extends Component {
   render() {
     return (
+        <Image source={require('./images/background.psd')} style={styles.container}>
+          <Text style={styles.landingHeader}>
+            Peer Pulse
+          </Text>
 
-      <View style={styles.container}>
-        <Image source={require('./images/background.psd')} style={styles.backgroundImage}/>
-
-      </View>
+      <TouchableHighlight style={styles.button}>
+  <Text style={styles.buttonText}>get started</Text>
+</TouchableHighlight>
+</Image>
     );
   }
 }
@@ -28,24 +33,30 @@ export default class Peer extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'row',
-    alignItems: 'stretch',
+    width: undefined,
+    height: undefined,
+    backgroundColor: 'transparent',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  backgroundImage:{
+  landingHeader:{
+    fontSize: 30,
     flex: 1,
-    width: null,
-    height: null,
+    marginTop: 200,
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  button: {
+  backgroundColor: '#292F36',
+  height: 50,
+  width: 150,
+  marginBottom: 100,
+  justifyContent: 'center',
+  alignItems: 'center',
+  borderRadius: 10,
+},
+buttonText: {
+  color: 'white',
+  fontSize: 20
+},
 });
 
 AppRegistry.registerComponent('Peer', () => Peer);
