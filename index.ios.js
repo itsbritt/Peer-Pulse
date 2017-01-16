@@ -9,23 +9,17 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
+  Image,
   View
 } from 'react-native';
 
 export default class Peer extends Component {
   render() {
     return (
+
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <Image source={require('./images/background.psd')} style={styles.backgroundImage}/>
+
       </View>
     );
   }
@@ -34,9 +28,13 @@ export default class Peer extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    flexDirection: 'row',
+    alignItems: 'stretch',
+  },
+  backgroundImage:{
+    flex: 1,
+    width: null,
+    height: null,
   },
   welcome: {
     fontSize: 20,
