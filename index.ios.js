@@ -13,6 +13,7 @@ import {
 
 import App from './App';
 import Home from './Home';
+import AddProject from './components/AddProject';
 
 class Peer extends Component {
   render() {
@@ -23,6 +24,8 @@ class Peer extends Component {
           let TheComponent = App;
           if (route.name === 'Home') {
             TheComponent = Home
+          } if (route.name === 'AddProject') {
+            TheComponent = AddProject
           }
           return <TheComponent navigator={navigator} />
         }
