@@ -18,6 +18,15 @@ export default class Home extends Component {
             <Image style={ styles.image } source={require('./images/home.psd')} />
        </TouchableHighlight>
 
+       <TouchableHighlight onPress={() => {
+         this.props.navigator.push({
+           name: 'AddProject',
+           title: 'AppProject'
+         })
+         }}>
+            <Image style={ styles.image } source={require('./images/add.psd')} />
+       </TouchableHighlight>
+
       </View>
     </View>
     )

@@ -8,7 +8,7 @@ import {
   View
 } from 'react-native';
 
-import Home from './Home'
+import Home from './Home';
 
 class App extends React.Component {
 
